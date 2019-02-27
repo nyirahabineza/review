@@ -119,7 +119,7 @@ def new_review(id):
 
         # save review method
         new_review.save_review()
-        return redirect(url_for('.movie',id = movie.id ))
+        return redirect(url_for('.pitch',id = pitch.id ))
 
     title = f'{pitch.title} review'
     return render_template('new_review.html',title = title, review_form=form, pitch=pitch)
